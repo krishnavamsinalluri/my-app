@@ -9,11 +9,28 @@ import {
 } from "react-router-dom";
 import { store } from './store/store';
 import { Provider } from 'react-redux';
+import Login from './features/dashboard/login';
+import Home from './features/dashboard/Home';
+import Dashboard from './features/dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    children:[
+      {
+        path:"/",
+        element:<Home></Home>
+
+      },
+     { path:"/login",
+      element:<Login></Login>},
+      {
+        path:"/dashbord",
+        element:<Dashboard></Dashboard>
+      }
+    ]
+  
   }
   ])
   

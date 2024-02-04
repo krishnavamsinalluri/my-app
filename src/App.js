@@ -1,9 +1,12 @@
-import Login from "./features/dashboard/login"
+import { Outlet } from "react-router-dom"
 
 function App(){
 
     return(
-        <Login></Login>
+        <div className="card">
+            <Outlet></Outlet>
+        </div>
     )
+
 }
 export default App

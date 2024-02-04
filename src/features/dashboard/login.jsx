@@ -1,7 +1,9 @@
 import { useFormik } from "formik"
 import { useLazyGetUsersByNameQuery } from "../../servers/user"
+import { useNavigate } from "react-router-dom"
 
 function Login(){
+  var navi=  useNavigate()
    var [rfn] =    useLazyGetUsersByNameQuery()
    var login=useFormik({
     initialValues:{
@@ -10,7 +12,17 @@ function Login(){
 
     },
     onSubmit:(values)=>{
-        rfn(values)
+        rfn(values).then((res)=>{
+            console.log(res)
+            window.localStorage.setItem("user",JSON.stringify(res.data))
+            if(res.data.length===0){
+                alert("cheeck details ")
+            }
+            else{
+                navi('/dashbord')
+            }
+  
+        })
         console.log(values)
     }
    })
@@ -26,4 +38,4 @@ function Login(){
         </div>
    )
 }
-export default Login()
+export default Login
