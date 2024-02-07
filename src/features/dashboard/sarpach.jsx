@@ -30,10 +30,8 @@ function Sarpach(){
             Village Name :<br></br>
             <input type="text" placeholder="Village Name" value={problems.values.villagename} name="villagename" onChange={problems.handleChange} onBlur={problems.handleBlur}/> <br />
             Phone Number :<br></br>
-            <input type="text" placeholder="Phone Number" value={problems.values.phonenumber} name="phonenumber" onChange={problems.handleChange} onBlur={problems.handleBlur}/> <br />
-            image :<br></br>
-            <input type="text" placeholder="upload image"  value={problems.values.image} name="image" onChange={problems.handleChange} onBlur={problems.handleBlur}/> <br /> <br />
-            <button className="btn btn-outline-dark"  >Raise problem</button> 
+            <input type="text" placeholder="Phone Number" value={problems.values.phonenumber} name="phonenumber" onChange={problems.handleChange} onBlur={problems.handleBlur}/> <br /><br />
+           <button className="btn btn-outline-dark"  >Raise problem</button> 
            </form>
             </div>
     )

@@ -1,16 +1,22 @@
 import { useState } from "react"
-import { useGetAllproblemsQuery, useUpdateProdlemMutation,  } from "../../servers/problem"
+import { useDeleteproblemMutation, useGetAllproblemsQuery, useLazyGetAllproblemsQuery, useUpdateProdlemMutation,  } from "../../servers/problem"
 import { useGetAllMandalQuery } from "../../servers/user"
-import { Alert } from "bootstrap"
 
 function Mla(){
     var {isLoading,data}=useGetAllproblemsQuery()
+    var [rfud]=useLazyGetAllproblemsQuery()
     var{isLoading:mandalLoading,data:Mandaldata} = useGetAllMandalQuery()
       var [updf]=  useUpdateProdlemMutation()
+      var[defu]=useDeleteproblemMutation()
   var [selectmadalId,setSelectmadalId]=useState(null)
         function asignIssu(emp){
           var updated={...emp,mandalId:selectmadalId}
           updf((updated))
+        }
+        function dele(id){
+          defu(id).then((res)=>{
+            rfud()
+          })
         }
     return(
         <div className="container">
@@ -23,6 +29,7 @@ function Mla(){
               <th>Phone number</th>
               <th>Selection</th>
               <th>Action</th>
+              <th>Solve</th>
             </thead>
               <tbody>
               {
@@ -40,7 +47,7 @@ function Mla(){
                               {
                                 Mandaldata.map((b)=>{
                                   return (
-                                    <option value={b.id} selected={+ a.mandalId===b.id}>
+                                    <option value={b.id} selected={console.log("id"+ a.mandalId===b.id)}>
                                       {b.username}
                                     </option>
                                   )
@@ -49,7 +56,8 @@ function Mla(){
                             </select>
  
                           </td>
-                            <td> <button onClick={()=>{asignIssu(a)}}>Assign</button></td>  
+                            <td> <b className="btn btn-outline-dark"  onClick={()=>{asignIssu(a)}}>Assign</b></td>
+                           <td> <i class="bi bi-check-circle-fill"  onClick={()=>{dele(a.id)}}>Done</i></td>  
                     </tr>)
                 })
             }

@@ -12,6 +12,7 @@ import { Provider } from 'react-redux';
 import Login from './features/dashboard/login';
 import Home from './features/dashboard/Home';
 import Dashboard from './features/dashboard/Dashboard';
+import Mandal from './features/dashboard/Mandal';
 
 const router = createBrowserRouter([
   {
@@ -27,8 +28,16 @@ const router = createBrowserRouter([
       element:<Login></Login>},
       {
         path:"/dashbord",
-        element:<Dashboard></Dashboard>
-      }
+        element:<Dashboard></Dashboard>,
+        children:[
+          {
+            path:"/dashbord/:mid",
+            element:<Mandal></Mandal>
+          }
+     
+        ]
+      },
+
     ]
   
   }
