@@ -9,6 +9,10 @@ export const problemApi = createApi({
     getAllproblems:builder.query({
         query:()=>`/`,
     }),
+    getMandadID:builder.query({
+      query:(mandalId)=>`/${mandalId}`,
+    
+    }),  
     addProdlem:builder.mutation({
         query:(problem)=>{
             return{
@@ -17,10 +21,19 @@ export const problemApi = createApi({
                 body:problem
             }
         }
-    })
+    }),
+    UpdateProdlem:builder.mutation({
+      query:(problem)=>{
+          return{
+              url:`/${problem.id}`,
+              method:"put",
+              body:problem
+          }
+      }
+  }),
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const {useAddProdlemMutation,useGetAllproblemsQuery} = problemApi
+export const {useAddProdlemMutation,useGetAllproblemsQuery,useLazyGetAllproblemsQuery,useUpdateProdlemMutation,useGetMandadIDQuery} = problemApi

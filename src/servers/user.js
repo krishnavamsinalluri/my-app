@@ -9,19 +9,24 @@ export const usersApi = createApi({
     getUsersByName: builder.query({
       query: (user) => `?username=${user.username}&password=${user.password}`,
     }),
-  addnewUsers:builder.mutation({
-    query:(newuser)=>{
-      return{
-        url:`/`,
-        method:"post",
-        boby:newuser,
+    getAllMandal:builder.query({
+        query:()=>{
+          return `?role=Mandalleader`
+        }
+    }),
 
+    AddNewuser:builder.mutation({
+      query:(newuser)=>{
+        return {
+          url:`/`,
+          method:"post",
+          body:newuser
+        }
       }
-    }
-  })
+    }),
   }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const {useGetUsersByNameQuery,useLazyGetUsersByNameQuery,useAddnewUsersMutation} = usersApi
+export const {useGetUsersByNameQuery,useLazyGetUsersByNameQuery,useAddNewuserMutation,useGetAllMandalQuery} = usersApi

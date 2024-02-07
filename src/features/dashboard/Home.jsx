@@ -1,18 +1,17 @@
 import { useFormik } from "formik";
-import { useAddnewUsersMutation } from "../../servers/user";
 import { useNavigate } from "react-router-dom";
+import { useAddNewuserMutation } from "../../servers/user";
 
 function Home() {
+  var [nnf]=useAddNewuserMutation()
   const navi = useNavigate();
-  const [nfn] = useAddnewUsersMutation();
-
-  console.log("nn" + nfn);
 
   var newuserform = useFormik({
-    initialValues: { username: "", password: "", role: "", id: "" },
+    initialValues: { "username":"","password":"","role":"", },
     onSubmit: (values) => {
-      nfn(values).then((res) => {
-        alert(JSON.stringify(res));
+      nnf(values).then((res) => {
+
+        alert("Your are Registered");
         console.log(values);
       });
     },
@@ -23,8 +22,15 @@ function Home() {
   }
 
   return (
-    <div>
-      <form onSubmit={newuserform.handleSubmit}>
+    <div className="home row">
+        <div className="col">
+        <img width={"600px"} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhRneROQwJ6GeinratuR0mnQOtNilVatiP_T_Tf1hm8g&s" alt="" />
+
+        </div>
+
+          <div className=" item col"  >
+
+          <form onSubmit={newuserform.handleSubmit}  >
         <h3>Registration</h3>
 
         <i className="bi bi-person-fill">Username :</i> <br />
@@ -32,6 +38,7 @@ function Home() {
         <input
           type="text"
           name="username"
+          placeholder="Username"
           onChange={newuserform.handleChange}
           onBlur={newuserform.handleBlur}
         />
@@ -41,6 +48,7 @@ function Home() {
         <input
           type="text"
           name="password"
+          placeholder="Password"
           onChange={newuserform.handleChange}
           onBlur={newuserform.handleBlur}
         />
@@ -49,21 +57,22 @@ function Home() {
         <input
           type="text"
           name="role"
+          placeholder="Role"
           onChange={newuserform.handleChange}
           onBlur={newuserform.handleBlur}
         />
-        <br />
-        <button type="submit" className="btn btn-outline-dark">
+        <br /> <br />
+        <button  className="btn btn-outline-dark">
           Registration
-        </button>
+        </button> or
         <button
-          type="button"
           className="btn btn-outline-dark"
           onClick={() => Login()}
         >
           Login
         </button>
       </form>
+          </div>
     </div>
   );
 }

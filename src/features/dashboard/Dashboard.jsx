@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import Mla from "./mla"
 import Sarpach from "./sarpach"
+import Mandal from "./Mandal"
 
 function Dashboard(){
   var navi=  useNavigate()
@@ -27,6 +28,10 @@ function Dashboard(){
             {
                 role==="sarpach" && <Sarpach></Sarpach>
             }
+            {
+                role==="Mandalleader" && <Mandal></Mandal>    
+                
+                }
        
     </div>
 }

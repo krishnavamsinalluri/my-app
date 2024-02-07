@@ -27,8 +27,9 @@ function Login(){
     }
    })
     return(
-        <div>
-            <form onSubmit={login.handleSubmit} >
+        <div >
+            <form onSubmit={login.handleSubmit} className="login" >
+            <h1 class="bi bi-person-circle"></h1>
             <b className="bi bi-person-fill">:</b>    <input type="text"  placeholder="Username" name="username" onChange={login.handleChange} /><br /><br />
                 <b class="bi bi-lock-fill">:</b>    <input type="text" placeholder="password" name="Password" onChange={login.handleChange} /><br /><br />
                 
