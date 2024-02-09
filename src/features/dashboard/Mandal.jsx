@@ -11,7 +11,6 @@ function Mandal(){
                 method:'get',
                 url: 'http://localhost:4000/problem' 
             }).then((res)=>{
-
                 setProblems(res.data)
             })
     },[])
@@ -33,7 +32,7 @@ function Mandal(){
                         if(problems.mandalId=== user.id){
                             return (
                                 <tr>
-                         <td> { is.issue}</td>
+                          <td> { is.issue}</td>
                           <td>{is.name}</td>
                           <td>{is.mandalname}</td>
                           <td>{is.villagename}</td>
