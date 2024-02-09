@@ -24,7 +24,6 @@ function Mandal(){
               <th>Name of Mandal</th>
               <th>Name of Village</th>
               <th>Phone number</th>
-
                 </thead>
                 <tbody>
                 {
