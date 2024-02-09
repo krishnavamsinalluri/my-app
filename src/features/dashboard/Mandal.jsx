@@ -37,7 +37,6 @@ function Mandal(){
                           <td>{is.mandalname}</td>
                           <td>{is.villagename}</td>
                           <td>{is.phonenumber}</td>
-
                                 </tr>
                             )
                         }
