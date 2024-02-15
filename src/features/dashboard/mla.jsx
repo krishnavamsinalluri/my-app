@@ -9,6 +9,7 @@ function Mla(){
       var [updf]=  useUpdateProdlemMutation()
       var[defu]=useDeleteproblemMutation()
   var [selectmadalId,setSelectmadalId]=useState(null)
+
         function asignIssu(emp){
           var updated={...emp,mandalId:selectmadalId}
           updf((updated))
@@ -35,7 +36,6 @@ function Mla(){
               {
                 !isLoading && !mandalLoading && data.map((a)=>{
                     return (<tr >
-                          
                           <td> { a.issue}</td>
                           <td>{a.name}</td>
                           <td>{a.mandalname}</td>
@@ -54,7 +54,6 @@ function Mla(){
                                 })
                               }
                             </select>
- 
                           </td>
                             <td> <b className="btn btn-outline-dark"  onClick={()=>{asignIssu(a)}}>Assign</b></td>
                            <td> <i class="bi bi-check-circle-fill"  onClick={()=>{dele(a.id)}}>Done</i></td>  

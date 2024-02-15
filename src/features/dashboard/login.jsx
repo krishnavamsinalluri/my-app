@@ -9,7 +9,6 @@ function Login(){
     initialValues:{
         "username":"",
        "password":"",
-
     },
     onSubmit:(values)=>{
         rfn(values).then((res)=>{
