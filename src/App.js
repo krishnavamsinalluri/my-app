@@ -1,12 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router'
+import Landingpage from './store/pages/Landingpage'
 
 function App() {
   return (
     
       <div>
-        <Outlet></Outlet>
-      </div>
+        <Landingpage></Landingpage>
+ </div>
   
   )
 }

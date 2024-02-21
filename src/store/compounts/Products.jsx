@@ -1,8 +1,11 @@
 import React from 'react'
+import Mobiles from './Mobiless'
 
 function Products() {
   return (
-    <div>Products</div>
+    <div>
+       <Mobiles></Mobiles> 
+    </div>
   )
 }
 
