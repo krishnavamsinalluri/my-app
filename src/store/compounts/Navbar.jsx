@@ -13,7 +13,25 @@ function Navbar() {
                 </div>
                 </nav>
             </div>
- 
+            <div className='sub'>
+              <ul>
+                  <li>Moblies</li>
+                <li></li>
+                <li>Computers</li>
+                <li></li>
+                <li>Watches</li>
+                <li></li>
+                <li>Speakers</li>
+                <li>
+                </li>
+                <li>Furniture</li>
+                <li></li>
+                <li>Men Wear</li>
+                <li></li>
+                <li>Women Wear</li>
+              </ul>
+            </div>
+
     </div>
 
   )
