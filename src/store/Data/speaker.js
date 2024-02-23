@@ -1,4 +1,5 @@
 export const speakerData = [{
+        "id":"1",
         "product": "Speaker",
         "image": "assets/speakers/1.jpg",
         "brand": "Bose",
@@ -8,6 +9,7 @@ export const speakerData = [{
         "description": "A portable Bluetooth speaker with 360-degree sound and long battery life."
     },
     {
+        "id":"2",
         "product": "Speaker",
         "image": "assets/speakers/2.jpg",
         "brand": "Sonos",
@@ -17,6 +19,7 @@ export const speakerData = [{
         "description": "A compact speaker with rich sound and the ability to pair with other Sonos speakers."
     },
     {
+        "id":"3",
         "product": "Speaker",
         "image": "assets/speakers/3.jpg",
         "brand": "JBL",
@@ -26,6 +29,7 @@ export const speakerData = [{
         "description": "A waterproof portable speaker with powerful bass and vibrant colors."
     },
     {
+        "id":"4",
         "product": "Speaker",
         "image": "assets/speakers/4.jpg",
         "brand": "Sony",

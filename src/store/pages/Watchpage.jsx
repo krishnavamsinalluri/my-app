@@ -1,16 +1,16 @@
 import React from 'react'
-import { menData } from '../Data/men'
+import { watchData } from '../Data/watch'
 import { Link } from 'react-router-dom'
-function Menpage() {
+function Watchpage() {
   return (
     <div>
-                  <div>
+         <div>
         <div className='pagesection'>
         {
-            menData.map((iteams)=>{
+            watchData.map((iteams)=>{
                 return(
                     <div className='card w-4 m-4 p-6'>
-                        <Link to={`/men/${iteams.id}`}>  <img width={"200px"} src={iteams.image} alt="" /></Link>
+                        <Link to={`/watch/${iteams.id}`}>  <img width={"200px"} src={iteams.image} alt="" /></Link>
                         <b>{iteams.model}</b>
                     </div>
                 )
@@ -18,11 +18,8 @@ function Menpage() {
         }
         </div>
     </div>
-
     </div>
-  
-    
   )
 }
 
-export default Menpage
+export default Watchpage

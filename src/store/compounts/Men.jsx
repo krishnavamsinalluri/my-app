@@ -1,5 +1,6 @@
 import React from 'react'
 import { menData } from '../Data/men'
+import { Link } from 'react-router-dom'
       const fristimage=  menData.slice(0,5)
 function Men() {
   return (
@@ -11,7 +12,7 @@ function Men() {
   fristimage.map((iteam)=>{
     return (
       <div className="imagebox">
-          <img className='image' src={iteam.image} alt="" />
+        <Link to="/men">  <img className='image' src={iteam.image} alt="" /></Link>
   
     </div>
     )

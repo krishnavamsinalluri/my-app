@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 function Mobliessingles() {
       const id= useParams()
         const products=mobileData.find(function(iteam){
-            return(iteam.id===id)
+            return(iteam.id=== id)
         })
         console.log(id)
   return (

@@ -22,7 +22,7 @@ function Mobilespage() {
             <div className='fullpage'>
                 <div className='select' >
                     {mobileData.map(phone => (
-                        <div  key={phone.company}>
+                        <div className='m-6' key={phone.company}>
                             <label>
                                 <input
                                     type="checkbox"
@@ -35,10 +35,10 @@ function Mobilespage() {
                     ))}
                 </div>
 
-                <div className='pagesection'>
+                <div className='pagesection '>
                     {filteredProducts.map(item => (
                         <div className='card w-4 m-4 p-6' key={item.id}>
-                            <Link to={`/mobiles/${item.id}`}>
+                            <Link to={`/moblies/${item.id}`}>
                                 <img width="100%" src={item.image} alt={item.model} />
                             </Link>
                             <b>{item.company}, {item.model}</b>

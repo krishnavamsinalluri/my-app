@@ -1,5 +1,6 @@
 import React from 'react'
 import { speakerData } from '../Data/speaker'
+import { Link } from 'react-router-dom'
     const fristimage=  speakerData.slice(0,5)
 function Speaker() {
   return (
@@ -11,8 +12,8 @@ function Speaker() {
   fristimage.map((iteam)=>{
     return (
       <div className="imagebox">
-          <img className='image' src={iteam.image} alt="" />
-
+      <Link to="/speaker"> <img className='image' src={iteam.image} alt="" />
+      </Link>  
     </div>
     )
   })
