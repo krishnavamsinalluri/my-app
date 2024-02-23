@@ -1,6 +1,6 @@
 import React from 'react'
 import Landingpage from './store/pages/Landingpage'
-import { Routes,Route } from 'react-router-dom'
+import { Routes,Route, Outlet } from 'react-router-dom'
 import Mobilespage from './store/pages/Mobilespage'
 import Mobliessingles from './store/singles/Mobliessingles'
 import Computerpage from './store/pages/Computerpage'
