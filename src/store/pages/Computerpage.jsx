@@ -5,13 +5,13 @@ import { Link, useNavigate } from 'react-router-dom';
 function Computerpage() {
         var navi=useNavigate()
     const [selectProduct, setSelectProduct] = useState([]);
-    const [data, setData] = useState(computerData); // Corrected state initialization
+    const [data, setData] = useState(computerData); 
 
     function home(){
             navi('/')
     }
     function low() {
-        const sortedData = [...data].sort((a, b) => a.price - b.price); // Corrected sorting logic
+        const sortedData = [...data].sort((a, b) => a.price - b.price); 
         setData(sortedData);
     }
 

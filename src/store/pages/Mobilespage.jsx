@@ -3,7 +3,7 @@ import { mobileData } from '../Data/mobiles';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Mobilespage() {
-    const navigate = useNavigate(); // Moved the useNavigate Hook inside the component
+    const navigate = useNavigate(); 
 
     const [selectProduct, setSelectProduct] = useState([]);
     const [data, setData] = useState(mobileData);
@@ -23,8 +23,8 @@ function Mobilespage() {
     }
 
     function sea() {
-        const u = document.getElementById("se").value.toUpperCase();
-        const search = mobileData.filter((c) => c.company.toUpperCase().startsWith(u));
+        const u = document.getElementById("se").value;
+        const search = data.filter((c) =>{ return(c.company.toUpperCase().startsWith(u))});
         setData([...search]);
     }
 

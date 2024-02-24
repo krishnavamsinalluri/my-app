@@ -15,6 +15,8 @@ import Speakerpage from './store/pages/Speakerpage'
 import Speakersingle from './store/singles/Speakersingle'
 import Womenpage from './store/pages/Womenpage'
 import Womensingle from './store/singles/Womensingle'
+import Usercart from './store/Usercart'
+import Buynow from './store/Buynow'
 function App() {
   return (
     
@@ -35,6 +37,8 @@ function App() {
          <Route path="/speaker/:id" element={<Speakersingle></Speakersingle>}></Route>
          <Route path='/women' element={<Womenpage></Womenpage>}></Route>
          <Route path='/women/:id' element={<Womensingle></Womensingle>}></Route>
+        < Route path='/cart' element={<Usercart></Usercart>}></Route>
+        <Route path='/buynow/' element={<Buynow></Buynow>}></Route>
         </Routes>
  </div>
   
