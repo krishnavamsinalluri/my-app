@@ -11,7 +11,7 @@ function Speaker() {
 {
   fristimage.map((iteam)=>{
     return (
-      <div className="imagebox">
+      <div className="imagebox ">
       <Link to="/speaker"> <img className='image' src={iteam.image} alt="" />
       </Link>  
     </div>

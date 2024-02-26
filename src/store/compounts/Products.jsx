@@ -6,10 +6,12 @@ import Speaker from './Speaker'
 import Furniture from './Furniture'
 import Men from './Men'
 import Women from './Women'
+import Banner from './banner'
 
 function Products() {
   return (
     <div>
+      <Banner></Banner>
       <Mobiless></Mobiless>
       <Computer></Computer>
       <Watch></Watch>

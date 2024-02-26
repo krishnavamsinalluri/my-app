@@ -12,7 +12,7 @@ function Computer() {
         {
             fristimage.map((iteam)=>{
                 return(
-                    <div className='imagebox' >
+                    <div className='imagebox ' >
                      <Link to="/computers">  <img className='image' src={iteam.image} alt="" /></Link>
 
                     </div>

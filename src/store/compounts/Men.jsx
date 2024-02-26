@@ -11,7 +11,7 @@ function Men() {
 {
   fristimage.map((iteam)=>{
     return (
-      <div className="imagebox">
+      <div className="imagebox ">
         <Link to="/men">  <img className='image' src={iteam.image} alt="" /></Link>
   
     </div>

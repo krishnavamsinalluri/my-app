@@ -10,7 +10,7 @@ function Furniture() {
       {
         fristimage.map((iteam)=>{
           return (
-            <div className="imagebox">
+            <div className="imagebox ">
               <Link to="/furn">  <img className='image' src={iteam.image} alt="" /></Link>
         
           </div>

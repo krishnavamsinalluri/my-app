@@ -15,9 +15,11 @@ body{
 }
 .imagebox{
     width: 80%;
+    
 }
 .image{
     width: 80%;
+    
 }
 .Tittle h2{
     margin: 10px;
@@ -52,4 +54,13 @@ margin:10px;;
 }
 .form{
     text-align: center;
+}
+.cartselection{
+        text-align: center;
+}
+#summer{
+    background-image: image-set("https://t3.ftcdn.net/jpg/04/92/34/62/240_F_492346296_O8SAzY0mMJFpOqUqOamOouuq3oIMHwzH.jpg");
+    background-size:100%;
+    background-repeat: no-repeat;
+
 }

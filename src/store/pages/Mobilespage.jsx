@@ -37,8 +37,8 @@ function Mobilespage() {
     }
 
     const filteredProducts = selectProduct.length === 0 ?
-        mobileData :
-        mobileData.filter(item => selectProduct.includes(item.company));
+        data :
+        data.filter(item => selectProduct.includes(item.company));
 
     return (
         <>
@@ -56,6 +56,8 @@ function Mobilespage() {
 
             <div className='fullpage'>
                 <div className='select'>
+                <h1>Filter</h1>
+
                     {mobileData.map(phone => (
                         <div className="pro" key={phone.id}> {/* Added key prop */}
                             <label>
@@ -77,7 +79,8 @@ function Mobilespage() {
                                 <img width="100%" src={item.image} alt={item.model} />
                             </Link>
                             <b>{item.company}, {item.model}</b>
-                            <b>{item.price}</b>
+                            <b>$:{item.price}</b>
+
                         </div>
                     ))}
                 </div>

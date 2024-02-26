@@ -10,7 +10,7 @@ function Watch() {
 {
     fristimage.map((iteam)=>{
         return(
-            <div className='imagebox' >
+            <div className='imagebox ' >
                <Link to="/watch"> <img className='image' src={iteam.image} alt="" /></Link>
             </div>
         )

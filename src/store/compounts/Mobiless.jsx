@@ -13,7 +13,7 @@ function Mobiless() {
       {
         fristimage.map((iteam)=>{
           return (
-            <div className="imagebox">
+            <div className="imagebox ">
                 <Link to="/moblies">        <img className='image' src={iteam.image} alt="" /></Link>
           </div>
           )

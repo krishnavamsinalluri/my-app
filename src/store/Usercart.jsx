@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useCart } from './context/Cartcontext'
 import { useNavigate } from 'react-router-dom'
+import Navbar from './compounts/Navbar'
 
 function Usercart() {
     var {cartitem,addtoCart}=useCart()
@@ -9,24 +10,30 @@ function Usercart() {
       function buy(){
         navi("/buynow")
       }
+    
   return (
     <div>
+        <Navbar></Navbar>
         {cartitem.map((items)=>{
             return(
                 
-                <div className='cartselection'>
-                    <div className='cartimage'>
-                        <img src={items.image} alt="" />
-                        {console.log(cartitem)}
+                <div className='cartselection'>            
+                    
+                        <div className='d-flex'>
+                        <img width="200px" src={items.image} alt="" />
+                        <div className='m-6 p-4'>
+                        <h3><b>Product:</b>{items.product}</h3>
+                        <h5><b></b>{items.company}</h5>
+                        <h6><b>Price:</b>{items.price}</h6>
+                        <h6><b>Model:</b>{items.model}</h6>
+                        <button className="btn btn-success" onClick={()=>{buy()}}>Buy Now</button>
+
+                        </div>
+
                     </div>
-                    <div className='cartdetailes'>
-                        <h2>{items.product}</h2>
-                        <h2>{items.company}</h2>
-                        <h2>{items.price}</h2>
-                        <h3>{items.model}</h3>
-                        <button onClick={()=>{buy()}}>Buy Now</button>
                     </div>
-                </div>
+
+            
             )
         })}
     </div>

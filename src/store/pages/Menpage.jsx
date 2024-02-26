@@ -37,8 +37,8 @@ function Menpage() {
     }
 
     const filteredProducts = selectProduct.length === 0 ?
-        menData :
-        menData.filter(item => selectProduct.includes(item.model));
+        data :
+        data.filter(item => selectProduct.includes(item.model));
 
   return (
     <div>
@@ -56,6 +56,8 @@ function Menpage() {
 
                   <div className="fullpage">
                   <div className='select' >
+                  <h1>Filter</h1>
+
                     {menData.map(phone => (
                         <div className="pro" key={phone.model}>
                             <label>
@@ -77,7 +79,7 @@ function Menpage() {
                     <div className='card w-4 m-4 p-6'>
                         <Link to={`/men/${iteams.id}`}>  <img width={"250px"} src={iteams.image} alt="" /></Link>
                         <b>{iteams.model}</b>
-                        <b>{iteams.price}</b>
+                        <b>$:{iteams.price}</b>
                     </div>
                 )
             })
