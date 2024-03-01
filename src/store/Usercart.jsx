@@ -5,8 +5,7 @@ import Navbar from './compounts/Navbar'
 
 function Usercart() {
     var {cartitem,addtoCart}=useCart()
-    var[incer,setIncer]=React.useState(0)
-    var[decris,setDecris] = React.useState(0)
+    var[count,setcount]=React.useState(0)
 
 
       var navi=  useNavigate()
@@ -30,8 +29,8 @@ function Usercart() {
                         <h5><b></b>{items.company}</h5>
                         <h6><b>Price:</b>{items.price}</h6>
                         <h6><b>Model:</b>{items.model}</h6> 
-                       <b>qulitry</b>: <span onClick={()=>{setIncer(incer+1)}}>+</span>      <b>{incer}</b>
-                        <span onClick={()=>{setDecris(decris -0)}}>-</span><b>{decris}</b>
+                       <b>qulitry</b>: <button onClick={()=>{setcount(count+1)}}>+</button>      <b>{count}</b>
+                        <button onClick={()=>{setcount(count--)}}>-</button>
                         <br />
 
 
