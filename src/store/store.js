@@ -1,10 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 // Or from '@reduxjs/toolkit/query/react'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { productApi } from '../severs/product'
+import { productApi } from '../servers/product'
 export const store = configureStore({
   reducer: {
-    // Add the generated reducer as a specific top-level slice
     [productApi.reducerPath]: productApi.reducer,
 
 
