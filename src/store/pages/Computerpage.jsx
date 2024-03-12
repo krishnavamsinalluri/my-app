@@ -10,6 +10,7 @@ function Computerpage() {
     function home(){
             navi('/')
     }
+
     function low() {
         const sortedData = [...data].sort((a, b) => a.price - b.price); 
         setData(sortedData);
