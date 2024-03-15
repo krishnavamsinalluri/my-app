@@ -12,6 +12,7 @@ function Mandal(){
                 url: 'http://localhost:4000/problem' 
             }).then((res)=>{
                 setProblems(res.data)
+                
             })
     },[])
         
@@ -26,21 +27,23 @@ function Mandal(){
               <th>Phone number</th>
                 </thead>
                 <tbody>
-                {
-                    problems && problems.map((is)=>{
-                        if(problems.mandalId=== user.id){
+                
+                    {problems && problems.map((is, index) => {
+                        if (is.mandalId === user.id) {
                             return (
-                                <tr>
-                          <td> { is.issue}</td>
-                          <td>{is.name}</td>
-                          <td>{is.mandalname}</td>
-                          <td>{is.villagename}</td>
-                          <td>{is.phonenumber}</td>
+                                <tr key={index}>
+                                    <td>{is.issue}</td>
+                                    <td>{is.name}</td>
+                                    <td>{is.mandalname}</td>
+                                    <td>{is.villagename}</td>
+                                    <td>{is.phonenumber}</td>
                                 </tr>
-                            )
+                            );
                         }
-                    })
-                }
+                        // Add a return statement for the case when the condition is not met
+                        return null;
+                    })}
+                
 
                 </tbody>
    

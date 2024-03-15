@@ -4,6 +4,7 @@ import { useGetAllMandalQuery } from "../../servers/user"
 
 function Mla(){
     var {isLoading,data}=useGetAllproblemsQuery()
+    console.log(data)
     var [rfud]=useLazyGetAllproblemsQuery()
     var{isLoading:mandalLoading,data:Mandaldata} = useGetAllMandalQuery()
       var [updf]=  useUpdateProdlemMutation()
