@@ -26,13 +26,12 @@ function Dashboard(){
                 role==="M.L.A" && <Mla></Mla>
             }
             {
-                role==="Sarpanch" && <Sarpach></Sarpach>
+             role==="Sarpanch" && <Sarpach></Sarpach>
             }
             {
                 role==="Mandalleader" && <Mandal></Mandal>    
                 
                 }
-       
-    </div>
+   </div>
 }
 export default Dashboard
