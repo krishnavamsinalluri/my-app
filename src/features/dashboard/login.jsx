@@ -62,6 +62,27 @@ function Home() {
           onBlur={newuserform.handleBlur}
         />
         <br /> <br />
+        <i className="bi bi-person-fill">Username :</i> <br />
+
+<input
+  type="text"
+  name="username"
+  placeholder="Username"
+  onChange={newuserform.handleChange}
+  onBlur={newuserform.handleBlur}
+/>
+<br />
+<i className="bi bi-lock-fill">Password :</i> <br />
+
+<input
+  type="text"
+  name="password"
+  placeholder="Password"
+  onChange={newuserform.handleChange}
+  onBlur={newuserform.handleBlur}
+/>
+<br />
+
         <button  className="btn btn-outline-dark">
           Registration
         </button> or
