@@ -9,7 +9,6 @@ function Usercart() {
 
 
       var navi=  useNavigate()
-
       function buy(){
         navi("/buynow")
       }
