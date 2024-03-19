@@ -9,6 +9,7 @@ function Buynow() {
         onSubmit:(values)=>{
           alert("Order Confirmed")
             console.log(values)
+            
         }
     })
       function home(){
