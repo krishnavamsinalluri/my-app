@@ -13,6 +13,7 @@ function Banner() {
     <div class="carousel-item active">
       <img  src="https://static.vecteezy.com/system/resources/previews/002/654/460/non_2x/summer-sale-offer-banner-promotion-with-relax-folded-chair-and-umbrella-with-orange-background-vector.jpg" className="d-block w-100  shadow-lg" height='300' alt="..."/>
     </div>
+    
     <div class="carousel-item">
       <img src="https://img.freepik.com/premium-vector/product-advertising-hero-image-header-layout_1302-21013.jpg?size=626&ext=jpg&ga=GA1.1.2126216559.1699334969&semt=ais" className="d-block w-100 h-300 shadow-lg" height='300' alt="..."/>
     </div>
