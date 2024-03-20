@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCart } from './context/Cartcontext'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './compounts/Navbar'
 
 function Usercart() {
     var {cartitem,addtoCart}=useCart()
+    console.log(addtoCart)
     var[count,setcount]=React.useState(0)
 
 
