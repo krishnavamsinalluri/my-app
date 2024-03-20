@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 
 import Landingpage from './store/pages/Landingpage';
 import Mobilespage from './store/pages/Mobilespage';
@@ -22,9 +22,8 @@ import Buynow from './store/Buynow';
 function App() {
   return (
     <div>
-      <Router>
-        <Switch>
-          <div>
+      
+        <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="/mobiles" element={<Mobilespage />} />
           <Route path="/mobiles/:id" element={<Mobliessingles />} />
@@ -42,11 +41,10 @@ function App() {
           <Route path="/women/:id" element={<Womensingle />} />
           <Route path="/cart" element={<Usercart />} />
           <Route path="/buynow/" element={<Buynow />} />
-          </div>
-        </Switch>
-      </Router>
+        </Routes>
+      
     </div>
   );
 }
 
-export  {App,Switch};
+export default App;
