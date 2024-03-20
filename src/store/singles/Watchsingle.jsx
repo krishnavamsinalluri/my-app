@@ -6,7 +6,7 @@ import Navbar from '../compounts/Navbar'
 
 function Watchsingle() {
   var {addtoCart,cartitem}=useCart()
-
+    console.log(cartitem)
     var {id}=useParams()
 var product =watchData.find((function(item){return (item.id===id)}))
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCart } from './context/Cartcontext'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './compounts/Navbar'
@@ -6,7 +6,7 @@ import Navbar from './compounts/Navbar'
 function Usercart() {
     var {cartitem,addtoCart}=useCart()
     var[count,setcount]=React.useState(0)
-
+    console.log(addtoCart)
 
       var navi=  useNavigate()
       function buy(){
