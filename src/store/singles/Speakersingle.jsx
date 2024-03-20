@@ -5,7 +5,7 @@ import { useCart } from '../context/Cartcontext'
 import Navbar from '../compounts/Navbar'
 function Speakersingle() {
   var {addtoCart,cartitem}=useCart()
-
+    console.log(cartitem)
   var{id}= useParams()
   console.log(id)
 

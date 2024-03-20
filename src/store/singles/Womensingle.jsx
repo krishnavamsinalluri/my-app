@@ -3,10 +3,9 @@ import { womanData } from '../Data/woman'
 import { useParams } from 'react-router-dom'
 import { useCart } from '../context/Cartcontext'
 import Navbar from '../compounts/Navbar'
-
 function Womensingle() {
   var {addtoCart,cartitem}=useCart()
-
+    console.log(cartitem)
     var {id} =useParams()
     var product=womanData.find(function(item){return (item.id===id)})
   return (

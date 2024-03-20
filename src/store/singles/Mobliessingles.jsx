@@ -5,7 +5,7 @@ import { useCart } from '../context/Cartcontext'
 import Navbar from '../compounts/Navbar'
 function Mobliessingles() {
   var {addtoCart,cartitem}=useCart()
-
+      console.log(cartitem)
       const id= useParams()
         const products=mobileData.find(function(iteam){
             return(iteam.id=== id)

@@ -5,6 +5,7 @@ import { useCart } from '../context/Cartcontext'
 import Navbar from '../compounts/Navbar'
 function Computersingle() {
   var {addtoCart,cartitem}=useCart()
+  console.log(cartitem)
   var {id}=  useParams()
   var  product=computerData.find((function(item){
     return (item.id===id)

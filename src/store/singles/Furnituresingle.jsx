@@ -5,7 +5,7 @@ import { furnitureData } from '../Data/furniture'
 import Navbar from '../compounts/Navbar'
 function Furnituresingle() {
   var {addtoCart,cartitem}=useCart()
-
+    console.log(cartitem)
    var {id}= useParams()
    var product= furnitureData.find(function(item){return(item.id===id)})
 

@@ -6,6 +6,7 @@ import Navbar from '../compounts/Navbar'
 
 function Mensingle() {
   var {addtoCart,cartitem}=useCart()
+    console.log(cartitem)
     var {id} = useParams()
     var product =menData.find((function(iteam){return(iteam.id===id)}))
   return (
