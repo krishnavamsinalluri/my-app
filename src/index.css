@@ -7,7 +7,7 @@
     font-family: "Roboto",sans-serif;
 }
 body{
-    background-color: aliceblue;
+    background-color: rgb(90, 150, 202);
 }
 .display{
     display: flex;
